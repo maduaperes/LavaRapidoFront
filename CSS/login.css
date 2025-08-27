@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: linear-gradient(180deg, #071126, #0b1220);
+    color: #e6eef8;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.card {
+    width: 92%;
+    max-width: 420px;
+    padding: 28px 24px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 12px 25px rgba(2, 6, 23, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(2, 6, 23, 0.8);
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 0;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.08);
+    color: #e6eef8;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+}
+
+label {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-top: 6px;
+    display: block;
+}
+
+.primary {
+    width: 100%;
+    background: linear-gradient(90deg, #4f46e5, #f97316);
+    border: 0;
+    padding: 14px;
+    border-radius: 12px;
+    color: #fff;
+    margin-top: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 6px 15px rgba(255, 140, 0, 0.4);
+}
+
+.primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.6);
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.social {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: transparent;
+    color: #e6eef8;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.social:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.muted {
+    color: #94a3b8;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 14px;
+    transition: color 0.3s;
+}
+
+.muted a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.muted a:hover {
+    color: #FFD700;
+}

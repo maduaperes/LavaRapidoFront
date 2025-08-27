@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: linear-gradient(180deg, #071126, #0b1220);
+    color: #e6eef8;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 92%;
+    max-width: 420px;
+    padding: 22px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 8px 20px rgba(2, 6, 23, 0.6);
+    text-align: center;
+}
+
+h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+input[type="text"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.06);
+    color: #e6eef8;
+    font-size: 14px;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+label {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-top: 6px;
+    display: block;
+    text-align: left;
+}
+
+.stars {
+    font-size: 28px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.stars span {
+    transition: color 0.3s, transform 0.2s;
+    color: #444;
+}
+
+.stars span.hover,
+.stars span.selected {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+.upload {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.upload label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.upload input {
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button.primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #4f46e5, #f97316);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button.primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.6);
+}
+
+button.secondary {
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background: #444;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button.secondary:hover {
+    background: #666;
+}
+
+.feedback-message {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #90ee90;
+    text-align: center;
+}
+
+.muted {
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 12px;
+}

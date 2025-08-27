@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: #e6eef8;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top .mini {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.user {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #f1f5f9;
+}
+
+.wrap {
+  padding: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+h3, h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+/* Grid de Serviços */
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.service {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.service:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.service i {
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.service p {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Botões */
+.primary {
+  background: linear-gradient(90deg, #6366f1, #f97316);
+  border: 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.primary:hover {
+  opacity: 0.9;
+}
+
+.secondary {
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 12px;
+  color: #e2e8f0;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Promoções */
+.promoCard {
+  padding: 14px;
+  background: linear-gradient(90deg, #0ea5a3, #6366f1);
+  border-radius: 12px;
+  margin-top: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Mapa */
+.mapCard {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

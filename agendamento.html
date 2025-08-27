@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang='pt-BR'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <title>Agendamento - LavaJato</title>
+  <link rel='stylesheet' href='CSS/agendamento.css'>
+</head>
+
+<body>
+  <main class='card'>
+    <h2>Agendar Serviço</h2>
+    <p class="subtitle">Escolha o serviço, data e forma de pagamento</p>
+    <form id='schedForm'>
+      <label for="serviceSelect">Serviço</label>
+      <select id='serviceSelect' required>
+        <option value="">Selecione</option>
+        <option>Lavagem Simples</option>
+        <option>Lavagem Completa</option>
+        <option>Polimento</option>
+        <option>Estética Automotiva</option>
+      </select>
+
+      <label for="date">Data</label>
+      <input id='date' type='date' required>
+
+      <label for="time">Horário</label>
+      <input id='time' type='time' required>
+
+      <label for="payment">Pagamento</label>
+      <select id='payment' required>
+        <option>Cartão</option>
+        <option>Dinheiro</option>
+        <option>Pix</option>
+      </select>
+
+      <button class='primary' type='submit'>Confirmar</button>
+    </form>
+  </main>
+  <script src='JS/agendamento.js'></script>
+</body>
+
+</html>

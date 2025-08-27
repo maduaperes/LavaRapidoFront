@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(180deg, #0b1220, #111827);
+  color: #e6eef8;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.card {
+  width: 92%;
+  max-width: 480px;
+  padding: 28px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 0.6s ease;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #fff;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+option {
+  color: #e6eef8;  
+  background: #1e293b; 
+}
+
+select,
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #e6eef8;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 2px #6366f1;
+}
+
+.primary {
+  margin-top: 18px;
+  background: linear-gradient(90deg, #4f46e5, #f97316);
+  border: 0;
+  padding: 14px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

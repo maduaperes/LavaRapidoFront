@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro - LavaJato</title>
+  <link rel="stylesheet" href="CSS/signup.css">
+</head>
+
+<body>
+  <main class="card">
+    <h2>Cadastro</h2>
+    <form id="signupForm">
+      <input id="name" type="text" placeholder="Nome completo" required>
+      <input id="email" type="email" placeholder="Email" required>
+      <input id="phone" type="tel" placeholder="Telefone" required>
+      <input id="password" type="password" placeholder="Senha" required>
+      <button class="primary" type="submit">Criar conta</button>
+    </form>
+    <p class="muted">
+      <a href="login.html">Já tem conta? Entrar</a>
+    </p>
+    <div id="feedback" class="feedback-message"></div>
+  </main>
+
+  <script src="JS/signup.js"></script>
+</body>
+
+</html>

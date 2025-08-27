@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, Arial, sans-serif;
+    background: linear-gradient(180deg, #071126, #0b1220);
+    color: #e6eef8;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.splash {
+    width: 92%;
+    max-width: 420px;
+    padding: 30px 28px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(2, 6, 23, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.splash:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 50px rgba(2, 6, 23, 0.8);
+}
+
+.logo {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 16px;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.car {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 16px;
+    opacity: 0.95;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.primary {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #4f46e5, #f97316);
+    border: 0;
+    padding: 14px 20px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 6px 15px rgba(255, 140, 0, 0.4);
+}
+
+.primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 140, 0, 0.6);
+}

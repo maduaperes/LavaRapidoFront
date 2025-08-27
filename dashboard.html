@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang='pt-BR'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <title>Dashboard - LavaJato</title>
+  <link rel='stylesheet' href='CSS/dashboard.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class='top'>
+    <img src="logo.svg" class="mini" alt="logo">
+    <div class='user' id='userName'>👋 Olá, João</div>
+  </header>
+
+  <main class='wrap'>
+
+    <section class='services'>
+      <h3>Serviços</h3>
+      <div class='grid' id='servicesList'>
+        <div class="service">
+          <i class="fa-solid fa-car fa-2x"></i>
+          <p>Lavagem Simples</p>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-bubbles fa-2x"></i>
+          <p>Lavagem Completa</p>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-spray-can-sparkles fa-2x"></i>
+          <p>Polimento</p>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-star fa-2x"></i>
+          <p>Estética</p>
+        </div>
+      </div>
+    </section>
+
+    <section class='promo'>
+      <h3>Promoções</h3>
+      <div class='card promoCard'>
+        <i class="fa-solid fa-tags"></i> 10% OFF na lavagem completa às segundas
+      </div>
+    </section>
+
+    <section class='quick'>
+      <button id='quickSchedule' class='primary'>
+        <i class="fa-solid fa-calendar-check"></i> Agendamento rápido
+      </button>
+      <button onclick="location.href='status.html'" class='secondary'>
+        <i class="fa-solid fa-clock"></i> Status do serviço
+      </button>
+    </section>
+
+    <footer class='mapCard'>
+      <h4>Unidades próximas</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Rua Exemplo, 123 - Centro (1,2 km)</p>
+    </footer>
+  </main>
+
+  <script src='JS/dashboard.js'></script>
+</body>
+
+</html>
