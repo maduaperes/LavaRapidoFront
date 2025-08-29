@@ -1,39 +1,58 @@
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Base */
 body {
   font-family: 'Inter', Arial, sans-serif;
   background: linear-gradient(180deg, #0f172a, #1e293b);
   color: #e6eef8;
-  margin: 0;
   min-height: 100vh;
+  line-height: 1.5;
 }
 
+/* Top Bar */
 .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 16px 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 16px;
+  padding: 18px 24px;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 
 .top .mini {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.top .mini:hover {
+  transform: scale(1.05);
+  border-color: #38bdf8;
 }
 
 .user {
   font-weight: 600;
-  font-size: 1rem;
-  color: #f1f5f9;
+  font-size: 1.05rem;
+  background: linear-gradient(90deg, #4f46e5, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* Conteúdo */
 .wrap {
   padding: 20px;
   max-width: 980px;
@@ -49,33 +68,36 @@ h3, h4 {
 /* Grid de Serviços */
 .services .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 14px;
-  margin-top: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
 }
 
 .service {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 16px;
-  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 18px;
+  border-radius: 16px;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .service:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
 
 .service i {
+  font-size: 1.6rem;
   color: #38bdf8;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .service p {
   font-size: 0.95rem;
   font-weight: 500;
+  color: #e2e8f0;
 }
 
 /* Botões */
@@ -83,57 +105,62 @@ h3, h4 {
   background: linear-gradient(90deg, #6366f1, #f97316);
   border: 0;
   padding: 14px 16px;
-  border-radius: 12px;
+  border-radius: 14px;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 1rem;
-  transition: opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .primary:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  transform: scale(1.02);
 }
 
 .secondary {
-  margin-top: 10px;
+  margin-top: 12px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 14px;
   color: #e2e8f0;
   cursor: pointer;
   width: 100%;
   font-size: 0.95rem;
-  transition: background 0.2s ease;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .secondary:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Promoções */
 .promoCard {
-  padding: 14px;
+  padding: 16px;
   background: linear-gradient(90deg, #0ea5a3, #6366f1);
-  border-radius: 12px;
-  margin-top: 8px;
+  border-radius: 14px;
+  margin-top: 10px;
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  color: #f8fafc;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 /* Mapa */
 .mapCard {
   margin-top: 20px;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 14px;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 14px;
   font-size: 0.95rem;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
