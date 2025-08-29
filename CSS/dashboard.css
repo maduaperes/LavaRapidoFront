@@ -52,6 +52,24 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.back {
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #4f46e5, #f97316);
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+}
+
 /* Conteúdo */
 .wrap {
   padding: 20px;
