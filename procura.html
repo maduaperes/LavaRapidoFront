@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Procurar Serviços | LavaRapido & Estética</title>
+  
+  <link rel="stylesheet" href="CSS/procura.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <div class="logo-icon">🚗</div>
+      <span>LavaRapido & Estética</span>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <span>|</span>
+      <a href="#">Serviços</a>
+      <div class="search-box">
+        <input type="text" placeholder="Pesquisar serviços" />
+        <button>🔍</button>
+      </div>
+      <a href="#">Suporte</a>
+      <span>|</span>
+      <a class="reservas-btn" href="agendamento.html">Agendar</a>
+    </nav>
+
+    <div class="user">
+      <a href="login.html">Login</a>
+      <div class="avatar">👤</div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="search-filters">
+      <h2>Filtros de Busca</h2>
+      <label>
+        Serviço:
+        <select>
+          <option value="">Selecione</option>
+          <option value="lavagem_simples">Lavagem Simples</option>
+          <option value="lavagem_completa">Lavagem Completa</option>
+          <option value="polimento">Polimento</option>
+          <option value="estetica">Estética Automotiva</option>
+        </select>
+      </label>
+      <label>
+        Data:
+        <input type="date">
+      </label>
+      <label>
+        Horário:
+        <input type="time">
+      </label>
+      <label>
+        Veículo:
+        <input type="text" placeholder="Modelo ou placa">
+      </label>
+      <button class="search-btn">Buscar</button>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="service-results">
+      <h2>Serviços Disponíveis</h2>
+
+      <div class="service-card">
+        <img src="img/lavagem-simples.jpg" alt="Lavagem Simples">
+        <div class="service-info">
+          <h3>Lavagem Simples</h3>
+          <p>Preço: R$ 50,00</p>
+          <p>Limpeza básica e rápida do veículo</p>
+          <a href="detalhes.html">Ver mais</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="img/lavagem-completa.jpg" alt="Lavagem Completa">
+        <div class="service-info">
+          <h3>Lavagem Completa</h3>
+          <p>Preço: R$ 120,00</p>
+          <p>Lavagem detalhada interna e externa</p>
+          <a href="detalhes.html">Ver mais</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="img/polimento.jpg" alt="Polimento">
+        <div class="service-info">
+          <h3>Polimento</h3>
+          <p>Preço: R$ 250,00</p>
+          <p>Restauração do brilho da pintura</p>
+          <a href="detalhes.html">Ver mais</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="img/estetica.jpg" alt="Estética Automotiva">
+        <div class="service-info">
+          <h3>Estética Automotiva</h3>
+          <p></p>
+          <p>Cuidados estéticos completos para seu carro</p>
+          <a href="detalhes.html">Ver mais</a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+<script src="JS/script.js"></script>
+
+</body>
+
+</html>

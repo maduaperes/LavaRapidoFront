@@ -1,67 +1,66 @@
 <!doctype html>
-<html lang='pt-BR'>
+<html lang="pt-BR">
 
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dashboard - LavaJato</title>
-  <link rel='stylesheet' href='CSS/dashboard.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="CSS/dashboard.css" />
 </head>
 
 <body>
-  <header class='top'>
-    <img src="logo.svg" class="mini" alt="logo">
-    <div class='user' id='userName'>👋 Olá, João</div>
+  <header class="top" role="banner">
+    <img src="logo.svg" class="mini" alt="Logo LavaJato" />
+    <div class="user" id="userName" aria-label="Saudação ao usuário">👋 Olá, João</div>
   </header>
 
-  <main class='wrap'>
-
-    <section class='services'>
-      <h3>Serviços</h3>
-      <div class='grid' id='servicesList'>
-        <div class="service">
-          <i class="fa-solid fa-car fa-2x"></i>
+  <main class="wrap" role="main" aria-labelledby="mainTitle">
+    <section class="services" aria-labelledby="servicesTitle">
+      <h3 id="servicesTitle">Serviços</h3>
+      <div class="grid" id="servicesList" role="list">
+        <div class="service" role="listitem" tabindex="0" aria-label="Serviço: Lavagem Simples">
+          <i class="fa-solid fa-car fa-2x" aria-hidden="true"></i>
           <p>Lavagem Simples</p>
         </div>
-        <div class="service">
-          <i class="fa-solid fa-bubbles fa-2x"></i>
+        <div class="service" role="listitem" tabindex="0" aria-label="Serviço: Lavagem Completa">
+          <i class="fa-solid fa-bubbles fa-2x" aria-hidden="true"></i>
           <p>Lavagem Completa</p>
         </div>
-        <div class="service">
-          <i class="fa-solid fa-spray-can-sparkles fa-2x"></i>
+        <div class="service" role="listitem" tabindex="0" aria-label="Serviço: Polimento">
+          <i class="fa-solid fa-spray-can-sparkles fa-2x" aria-hidden="true"></i>
           <p>Polimento</p>
         </div>
-        <div class="service">
-          <i class="fa-solid fa-star fa-2x"></i>
+        <div class="service" role="listitem" tabindex="0" aria-label="Serviço: Estética">
+          <i class="fa-solid fa-star fa-2x" aria-hidden="true"></i>
           <p>Estética</p>
         </div>
       </div>
     </section>
 
-    <section class='promo'>
+    <section class="promo" aria-label="Promoções">
       <h3>Promoções</h3>
-      <div class='card promoCard'>
-        <i class="fa-solid fa-tags"></i> 10% OFF na lavagem completa às segundas
+      <div class="card promoCard" role="alert" aria-live="polite">
+        <i class="fa-solid fa-tags" aria-hidden="true"></i> 10% OFF na lavagem completa às segundas
       </div>
     </section>
 
-    <section class='quick'>
-      <button id='quickSchedule' class='primary'>
-        <i class="fa-solid fa-calendar-check"></i> Agendamento rápido
+    <section class="quick" aria-label="Ações rápidas">
+      <button id="quickSchedule" class="primary" aria-label="Agendamento rápido">
+        <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Agendamento rápido
       </button>
-      <button onclick="location.href='status.html'" class='secondary'>
-        <i class="fa-solid fa-clock"></i> Status do serviço
+      <button onclick="location.href='status.html'" class="secondary" aria-label="Status do serviço">
+        <i class="fa-solid fa-clock" aria-hidden="true"></i> Status do serviço
       </button>
     </section>
 
-    <footer class='mapCard'>
+    <footer class="mapCard" aria-label="Unidades próximas">
       <h4>Unidades próximas</h4>
-      <p><i class="fa-solid fa-location-dot"></i> Rua Exemplo, 123 - Centro (1,2 km)</p>
+      <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Rua Exemplo, 123 - Centro (1,2 km)</p>
     </footer>
   </main>
 
-  <script src='JS/dashboard.js'></script>
+  <script src="JS/dashboard.js"></script>
 </body>
 
 </html>
