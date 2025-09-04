@@ -8,7 +8,7 @@
 /* Base */
 body {
   font-family: 'Inter', Arial, sans-serif;
-  background: linear-gradient(180deg, #0f172a, #1e293b);
+  background: linear-gradient(180deg, #071126, #0b1220);
   color: #e6eef8;
   min-height: 100vh;
 
@@ -60,6 +60,24 @@ body {
   background: linear-gradient(90deg, #4f46e5, #f97316);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.back {
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #4f46e5, #f97316);
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
 }
 
 /* Card (form container) */

@@ -61,3 +61,7 @@ submitBtn.addEventListener('click', ()=>{
   feedbackMessage.textContent='Obrigado pela avaliação!';
   clearBtn.click();
 });
+document.getElementById('btnBack').addEventListener('click', () => {
+  location.href = 'status.html';
+});
+

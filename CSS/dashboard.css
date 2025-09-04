@@ -10,6 +10,172 @@ body {
   background: #f8f9fa;
   color: #333;
   min-height: 100vh;
+
+  line-height: 1.5;
+}
+
+/* Top Bar */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.top .mini {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.top .mini:hover {
+  transform: scale(1.05);
+  border-color: #38bdf8;
+}
+
+.user {
+  font-weight: 600;
+  font-size: 1.05rem;
+  background: linear-gradient(90deg, #4f46e5, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.back {
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #4f46e5, #f97316);
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+}
+
+.wrap {
+  padding: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+h3, h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.service {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.service i {
+  font-size: 1.6rem;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+
+.primary {
+  background: linear-gradient(90deg, #6366f1, #f97316);
+  border: 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 1rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.primary:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+.secondary {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 14px;
+  color: #e2e8f0;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.95rem;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.promoCard {
+  padding: 16px;
+  background: linear-gradient(90deg, #0ea5a3, #6366f1);
+  border-radius: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f8fafc;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+
+.mapCard {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 0.95rem;
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -50,7 +216,6 @@ main.wrap {
   gap: 2.5rem;
 }
 
-/* Seções */
 section {
   background: white;
   padding: 1.5rem 2rem;
@@ -70,7 +235,7 @@ section h3 {
   color: #22356F;
 }
 
-/* Serviços */
+
 .services .grid {
   display: flex;
   gap: 1.8rem;
@@ -209,7 +374,7 @@ footer.mapCard p i {
   font-size: 1.3rem;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   main.wrap {
     grid-template-columns: 1fr;

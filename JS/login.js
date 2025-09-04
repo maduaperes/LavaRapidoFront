@@ -6,3 +6,6 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   localStorage.setItem('lj_user', JSON.stringify({ name: 'Cliente', contact: email }));
   location.href = 'dashboard.html';
 });
+document.getElementById('btnBack').addEventListener('click', () => {
+  location.href = 'splash.html';
+});

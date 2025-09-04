@@ -14,3 +14,6 @@ services.forEach(s => {
 });
 const user = JSON.parse(localStorage.getItem('lj_user') || '{}'); document.getElementById('userName').textContent = user.name ? 'Olá, ' + user.name : 'Olá';
 document.getElementById('quickSchedule').addEventListener('click', () => location.href = 'agendamento.html');
+document.getElementById('btnBack').addEventListener('click', () => {
+  location.href = 'splash.html';
+});

@@ -1,7 +1,7 @@
 const form = document.getElementById('signupForm');
 const feedback = document.getElementById('feedback');
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const name = document.getElementById('name').value.trim() || 'Cliente';

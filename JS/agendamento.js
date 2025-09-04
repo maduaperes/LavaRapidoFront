@@ -19,3 +19,6 @@ document.getElementById('schedForm').addEventListener('submit', function (e) {
   alert('Agendamento confirmado!');
   location.href = 'status.html';
 });
+document.getElementById('btnBack').addEventListener('click', () => {
+  location.href = 'dashboard.html';
+});
