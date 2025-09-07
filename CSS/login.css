@@ -1,23 +1,32 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .top {
-  position: fixed;          /* Fixa no topo da janela */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 18px 24px;
-
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background: #22356F;
+  color: white;
   border-radius: 0 0 18px 18px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
@@ -39,9 +48,8 @@
 .user {
   font-weight: 600;
   font-size: 1.05rem;
-  background: linear-gradient(90deg, #4f46e5, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
+  user-select: none;
 }
 
 .back {
@@ -51,10 +59,11 @@
   border-radius: 14px;
   display: flex;
   align-items: center;
+  color: white;
   justify-content: center;
-  background: linear-gradient(90deg, #4f46e5, #f97316);
+  background: #22356F;
   cursor: pointer;
-  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .back:hover {
@@ -62,118 +71,108 @@
   box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
 }
 
-body {
-    font-family: Inter, Arial, sans-serif;
-    background: linear-gradient(180deg, #071126, #0b1220);
-    color: #e6eef8;
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-}
-
 .card {
-    width: 92%;
-    max-width: 420px;
-    padding: 28px 24px;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow: 0 12px 25px rgba(2, 6, 23, 0.7);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 92%;
+  max-width: 420px;
+  padding: 28px 24px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 12px 25px rgba(2, 6, 23, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(2, 6, 23, 0.8);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.2);
 }
 
 h2 {
-    margin: 0 0 18px;
-    font-size: 28px;
-    text-align: center;
-    color: #fff;
+  margin: 0 0 18px;
+  font-size: 28px;
+  text-align: center;
+  color: #22356F;
 }
 
 input {
-    display: block;
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 0;
-    margin: 10px 0;
-    background: rgba(255, 255, 255, 0.08);
-    color: #e6eef8;
-    font-size: 16px;
-    transition: all 0.3s;
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  background: #f8f9fa;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.3s;
 }
 
 input:focus {
-    outline: none;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+  outline: none;
+  border-color: #22356F;
+  box-shadow: 0 0 8px rgba(34, 53, 111, 0.4);
 }
 
 label {
-    font-size: 13px;
-    color: #cbd5e1;
-    margin-top: 6px;
-    display: block;
+  font-size: 13px;
+  color: #22356F;
+  margin-top: 6px;
+  display: block;
 }
 
 .primary {
-    width: 100%;
-    background: linear-gradient(90deg, #4f46e5, #f97316);
-    border: 0;
-    padding: 14px;
-    border-radius: 12px;
-    color: #fff;
-    margin-top: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 6px 15px rgba(255, 140, 0, 0.4);
+  width: 100%;
+  background: #22356F;
+  border: 0;
+  padding: 14px;
+  border-radius: 12px;
+  color: #fff;
+  margin-top: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .socials {
-    display: flex;
-    gap: 10px;
-    margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
 }
 
 .social {
-    flex: 1;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: transparent;
-    color: #e6eef8;
-    cursor: pointer;
-    transition: all 0.3s;
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #22356F;
+  background: transparent;
+  color: #22356F;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .social:hover {
-    background: rgba(255, 255, 255, 0.08);
+  background: #22356F;
+  color: white;
 }
 
 .muted {
-    color: #94a3b8;
-    font-size: 14px;
-    text-align: center;
-    margin-top: 14px;
-    transition: color 0.3s;
+  color: #22356F;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 14px;
+  transition: color 0.3s;
 }
 
 .muted a {
-    color: #94a3b8;
-    text-decoration: none;
+  color: #22356F;
+  text-decoration: none;
 }
 
 .muted a:hover {
-    color: #FFD700;
+  color: #6366f1;
 }

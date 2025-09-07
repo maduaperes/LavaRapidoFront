@@ -9,22 +9,42 @@
 </head>
 
 <body>
-  <header class='top'>
+  <header class="top">
     <img src="IMG/logo.png" class="mini" alt="logo">
-    <div class='user' id='userName'>👋 Olá, João</div>
+    <div class="user" id="userName">👋 Olá, João</div>
   </header>
+
   <main class="card">
     <h2>Cadastro</h2>
+
+    <!-- Seleção de tipo -->
+    <div class="user-type">
+      <input type="radio" id="cliente" name="userType" value="cliente" checked>
+      <label for="cliente">Cliente</label>
+
+      <input type="radio" id="profissional" name="userType" value="profissional">
+      <label for="profissional">Profissional</label>
+    </div>
+
     <form id="signupForm">
       <input id="name" type="text" placeholder="Nome completo" required>
       <input id="email" type="email" placeholder="Email" required>
       <input id="phone" type="tel" placeholder="Telefone" required>
       <input id="password" type="password" placeholder="Senha" required>
+
+      <!-- Campos extras para profissionais -->
+      <div id="professionalFields">
+        <input id="service" type="text" placeholder="Serviço oferecido">
+        <input id="company" type="text" placeholder="Empresa (opcional)">
+      </div>
+
       <button class="primary" type="submit">Criar conta</button>
     </form>
+
     <p class="muted">
       <a href="login.html">Já tem conta? Entrar</a>
     </p>
+
     <div id="feedback" class="feedback-message"></div>
   </main>
 
