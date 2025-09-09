@@ -11,35 +11,46 @@
 <body>
   <header class="top">
     <img src="IMG/logo.png" class="mini" alt="logo">
-    <div class="user" id="userName">👋 Olá, João</div>
+    <div class="user" id="userName">Conecte-se a uma conta</div>
   </header>
 
   <main class="card">
     <h2>Cadastro</h2>
 
-    <!-- Seleção de tipo -->
-    <div class="user-type">
-      <input type="radio" id="cliente" name="userType" value="cliente" checked>
-      <label for="cliente">Cliente</label>
+    <!-- Container que envolve radios e form -->
+    <div class="signup-container">
 
-      <input type="radio" id="profissional" name="userType" value="profissional">
-      <label for="profissional">Profissional</label>
+      <!-- Radios como irmãos diretos do formulário -->
+      <input type="radio" id="cliente" name="userType" checked>
+      <label for="cliente" class="radio-label">Cliente</label>
+
+      <input type="radio" id="estabelecimento" name="userType">
+      <label for="estabelecimento" class="radio-label">Estabelecimento</label>
+
+      <form id="signupForm">
+        <!-- Campos Cliente -->
+        <div id="clienteFields" class="fields">
+          <input type="text" placeholder="Nome completo" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Senha" required>
+          <input type="text" placeholder="CPF" required>
+        </div>
+
+        <!-- Campos Estabelecimento -->
+        <div id="establishmentFields" class="fields">
+          <input type="text" placeholder="Nome do Estabelecimento" required>
+          <input type="text" placeholder="CNPJ" required>
+          <input type="text" placeholder="Endereço completo" required>
+          <input type="text" placeholder="Cidade" required>
+          <input type="text" placeholder="Estado" required>
+          <input type="text" placeholder="CEP" required>
+          <input type="text" placeholder="Horário de funcionamento">
+        </div>
+
+        <button class="primary" type="submit">Criar conta</button>
+      </form>
+
     </div>
-
-    <form id="signupForm">
-      <input id="name" type="text" placeholder="Nome completo" required>
-      <input id="email" type="email" placeholder="Email" required>
-      <input id="phone" type="tel" placeholder="Telefone" required>
-      <input id="password" type="password" placeholder="Senha" required>
-
-      <!-- Campos extras para profissionais -->
-      <div id="professionalFields">
-        <input id="service" type="text" placeholder="Serviço oferecido">
-        <input id="company" type="text" placeholder="Empresa (opcional)">
-      </div>
-
-      <button class="primary" type="submit">Criar conta</button>
-    </form>
 
     <p class="muted">
       <a href="login.html">Já tem conta? Entrar</a>
@@ -47,8 +58,6 @@
 
     <div id="feedback" class="feedback-message"></div>
   </main>
-
-  <script src="JS/signup.js"></script>
 </body>
 
 </html>

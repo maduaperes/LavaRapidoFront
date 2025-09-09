@@ -46,10 +46,12 @@ body {
 }
 
 .user {
-  font-weight: 600;
-  font-size: 1.05rem;
+  font-weight: 420;
+  font-size: 14px;
   color: white;
   user-select: none;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .back {

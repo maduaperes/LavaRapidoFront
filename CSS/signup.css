@@ -1,3 +1,4 @@
+/* Reset e estilo base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,28 +8,29 @@
 
 body {
   background: #f8f9fa;
-  color: #333;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
 .top {
   position: fixed;
+  font-size: 14px;
+  cursor: pointer;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  align-items: center;
   padding: 18px 24px;
   background: #22356F;
   color: white;
   border-radius: 0 0 18px 18px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  z-index: 1000;
+  text-decoration: underline;
 }
 
 .top .mini {
@@ -45,149 +47,71 @@ body {
   border-color: #38bdf8;
 }
 
-.user {
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: white;
-  user-select: none;
-}
-
-.back {
-  font-size: 1.5rem;
-  width: 30px;
-  height: 30px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  color: white;
-  justify-content: center;
-  background: #22356F;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.back:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
-}
-
 .card {
   width: 92%;
   max-width: 420px;
   padding: 28px 24px;
   border-radius: 16px;
   background: white;
-  box-shadow: 0 12px 25px rgba(2, 6, 23, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 100px;
+  box-shadow: 0 12px 25px rgba(2,6,23,0.1);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.2);
+.card .muted {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #22356F;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 14px;
 }
 
 h2 {
-  margin: 0 0 18px;
-  font-size: 28px;
   text-align: center;
+  margin-bottom: 18px;
   color: #22356F;
+  font-size: 28 px;
 }
 
 input {
   display: block;
   width: 100%;
   padding: 12px 14px;
+  margin: 10px 0;
   border-radius: 10px;
   border: 1px solid #ccc;
-  margin: 10px 0;
-  background: #f8f9fa;
-  color: #333;
   font-size: 16px;
-  transition: all 0.3s;
 }
 
 input:focus {
   outline: none;
   border-color: #22356F;
-  box-shadow: 0 0 8px rgba(34, 53, 111, 0.4);
-}
-
-label {
-  font-size: 13px;
-  color: #22356F;
-  margin-top: 6px;
-  display: block;
+  box-shadow: 0 0 8px rgba(34,53,111,0.4);
 }
 
 .primary {
   width: 100%;
-  background: #22356F;
-  border: 0;
   padding: 14px;
+  border: none;
   border-radius: 12px;
-  color: #fff;
-  margin-top: 15px;
+  background: #22356F;
+  color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 15px;
 }
 
 .primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-}
-
-.socials {
-  display: flex;
-  gap: 10px;
-  margin-top: 14px;
-}
-
-.social {
-  flex: 1;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #22356F;
-  background: transparent;
-  color: #22356F;
-  cursor: pointer;
+  background: #22356F;
+  box-shadow: 0 6px 15px rgba(34, 53, 111, 0.4);
+  transform:  translateY(-2px);
   transition: all 0.3s;
 }
 
-.social:hover {
-  background: #22356F;
-  color: white;
-}
-
-.muted {
-  color: #22356F;
-  font-size: 14px;
-  text-align: center;
-  margin-top: 14px;
-  transition: color 0.3s;
-}
-
-.muted a {
-  color: #22356F;
-  text-decoration: none;
-}
-
-.muted a:hover {
-  color: #6366f1;
-}
-
-.feedback-message {
-  margin-top: 12px;
-  font-size: 14px;
-  color: #28a745;
-  text-align: center;
-}
-
-/* =======================
-   Cliente / Profissional
-======================= */
-
+/* ========================
+   Radios Cliente / Estabelecimento
+========================= */
 .user-type {
   display: flex;
   justify-content: center;
@@ -195,33 +119,43 @@ label {
   margin-bottom: 15px;
 }
 
-.user-type input[type="radio"] {
+.signup-container input[type="radio"] {
   display: none;
 }
 
-.user-type label {
+.radio-label {
+  display: inline-block;
+  background: white;
+  color: #22356F;
   padding: 8px 16px;
   border-radius: 12px;
   border: 1px solid #22356F;
   cursor: pointer;
-  transition: all 0.3s;
-  font-size: 14px;
-  user-select: none;
+  transition: 0.3s; 
 }
 
-.user-type input[type="radio"]:checked + label {
+#cliente:checked + .radio-label[for="cliente"] {
   background: #22356F;
   color: white;
-  box-shadow: 0 4px 12px rgba(34, 53, 111, 0.4);
 }
 
-/* Campos profissionais ocultos por padrão */
-#professionalFields {
+#estabelecimento:checked + .radio-label[for="estabelecimento"] {
+  background: #22356F;
+  color: white;
+}
+
+/* ========================
+   Alternar campos
+========================= */
+.signup-container .fields {
   display: none;
   margin-top: 10px;
 }
 
-/* Mostrar campos profissionais quando radio profissional estiver marcado */
-#profissional:checked ~ #signupForm #professionalFields {
+#cliente:checked ~ form #clienteFields {
+  display: block;
+}
+
+#estabelecimento:checked ~ form #establishmentFields {
   display: block;
 }
