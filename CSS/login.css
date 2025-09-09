@@ -83,11 +83,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.2);
-}
-
 h2 {
   margin: 0 0 18px;
   font-size: 28px;
